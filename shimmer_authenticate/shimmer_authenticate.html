@@ -1,0 +1,41 @@
+<script type="text/javascript">
+    RED.nodes.registerType('shimmer_authenticate',{
+        category: 'agile',
+        color: '#b042f4',
+        defaults: {
+            name: {value:""},
+            server: {value:"", type:"shimmer-config"},
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"shimmer_authenticate";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="shimmer_authenticate">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-server"><i class="fa fa-globe"></i> shimmer server</label>
+        <input type="text" id="node-input-server">
+    </div>
+
+</script>
+
+<script type="text/x-red" data-help-name="shimmer_authenticate">
+    <p>A node which initializes authentication with supported cloud services
+		<li> Google Fit </li>
+		<li> Fitbit </li>
+		<li> Jawbone </li>
+		<li> Misfit </li>
+		<li> RunKeeper </li>
+		<li> Withings </li>
+		<li> iHealth </li>	
+	</p>
+</script>
+

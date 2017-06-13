@@ -1,0 +1,32 @@
+<script type="text/javascript">
+    RED.nodes.registerType('shimmer-config',{
+        category: 'config',
+        defaults: {
+            shimmer_server_url: {value: "", required:true},
+			shimmer_service : {value:"", required:true}
+        },
+        label: function() {
+            return ((this.shimmer_server_url +"/" + this.shimmer_service) ||'Shimmer Config');
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="shimmer-config">
+    <div class="form-row">
+        <label for="node-config-input-shimmer_server_url"><i class="icon-bookmark"></i> HTTP binding endpoint</label>
+        <input type="text" id="node-config-input-shimmer_server_url" placeholder="http://localhost:8083">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-shimmer_service"><i class="pie-chart"></i> Cloud Service</label>
+        <input type="text" id="node-config-input-shimmer_service" placeholder="googlefit">
+    </div>
+
+</script>
+<script type="text/x-red" data-help-name="shimmer-config">
+    <h3>Config node</h3>
+    <dl>
+        <dt>HTTP binding endpoint</dt>
+        <dd>HTTP binding of Shimmer Service</dd>
+
+    </dl>
+</script>
