@@ -1,5 +1,5 @@
 {
-  "name": "node-red-contrib-agile-shimmer",
+  "name": "node-red-contrib-agile-fit",
   "version": "0.0.1",
   "description": "A sample node in Node-Red to get health data from cloud providers",
   "main": "index.js",
