@@ -62,7 +62,9 @@ module.exports = function(RED) {
 						msg.req = msgIn.req;
 						msg.res = msgIn.res;	
 					}		
-					
+					msg.headers = {
+         				"Content-type" : "application/json"
+     				}	
 					msg.payload =  res.body; 
 					node.send(msg);	
                   } else {
